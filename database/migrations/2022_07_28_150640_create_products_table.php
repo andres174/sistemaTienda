@@ -17,10 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('name', 255);
             $table->string('barcode', 45)->nullable();
-            $table->decimal('cost', 10, 2);
-            $table->decimal('price', 10,2);
-            $table->integer('stock');
+            $table->decimal('cost', 10, 2)->default(0);
+            $table->decimal('price', 10,2)->default(0);
+            $table->integer('stock')->default(0);
+            $table->integer('alerts')->default(5);
             $table->string('image', 100)->nullable();
+            $table->date('fecha_elaboracion');
+            $table->date('fecha_caducidad');
 
             $table->foreignId('category_id')->constrained('categories');
 

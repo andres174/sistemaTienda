@@ -21,7 +21,7 @@ return new class extends Migration
             $table->enum('profile', ['ADMIN', 'EMPLOYEE'])->default('ADMIN');
             $table->enum('status', ['ACTIVE', 'LOCKED'])->default('ACTIVE');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password', 50);
+            $table->string('password', 150);
             $table->string('image', 50)->nullable();
             $table->rememberToken();
             $table->timestamps();
