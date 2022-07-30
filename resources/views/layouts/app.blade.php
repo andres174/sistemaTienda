@@ -36,5 +36,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/adminlte/js/adminlte.min.js"></script>
+
+{{-- LIVEWIRE SRCIPTS --}}
+@livewireScripts
 </body>
 </html>

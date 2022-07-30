@@ -9,4 +9,7 @@
     <link rel="stylesheet" href="/adminlte/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/adminlte/css/adminlte.min.css">
+
+    {{-- LIVEWIRE STYLES --}}
+    @livewireStyles
   </head>
