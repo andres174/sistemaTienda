@@ -16,6 +16,8 @@ class Product extends Model
         'stock',
         'alerts',
         'image',
-        'category_id'
+        'category_id',
+        'fecha_elaboracion',
+        'fecha_caducidad'
     ];
 }
