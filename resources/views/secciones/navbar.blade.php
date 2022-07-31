@@ -1,6 +1,7 @@
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
   <!-- Left navbar links -->
   <ul class="navbar-nav">
+    {{-- abre el sidebar --}}
     <li class="nav-item">
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
@@ -37,7 +38,8 @@
     </li>
 
     <!-- Messages Dropdown Menu -->
-    <li class="nav-item dropdown">
+    {{-- EL ICONITO DE LOS MENSAJES --}} 
+    {{-- <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-comments"></i>
         <span class="badge badge-danger navbar-badge">3</span>
@@ -93,9 +95,10 @@
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
       </div>
-    </li>
+    </li> --}}
     <!-- Notifications Dropdown Menu -->
-    <li class="nav-item dropdown">
+    {{-- quiza use las notificaciones --}}
+    {{-- <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-bell"></i>
         <span class="badge badge-warning navbar-badge">15</span>
@@ -120,7 +123,8 @@
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
       </div>
-    </li>
+    </li> --}}
+
     <li class="nav-item">
       <a class="nav-link" data-widget="fullscreen" href="#" role="button">
         <i class="fas fa-expand-arrows-alt"></i>
@@ -131,5 +135,33 @@
         <i class="fas fa-th-large"></i>
       </a>
     </li>
+    {{-- <li class="nav-item">
+      <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </li> --}}
+    <li class="nav-item dropdown user-profile-dropdown order-lg-0 order-1">
+      <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="user-profile-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
+        <i class="fa-solid fa-user"></i>
+        {{-- <span class="badge badge-success"></span> --}}
+          
+      </a>
+
+      <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
+          <div class="dropdown-item">
+              <a href="user_profile.html">
+                <i class="fa-solid fa-id-card px-2"></i>
+                <span> Perfil</span>
+              </a>
+          </div>
+          <div class="dropdown-item">
+              <a href="auth_login.html">
+                <i class="fa-solid fa-arrow-right-from-bracket px-2"></i>
+                <span>Salir</span>
+              </a>
+          </div>
+      </div>
+  </li>
   </ul>
 </nav>
