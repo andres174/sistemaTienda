@@ -70,17 +70,6 @@ class CategoriesForm extends Component
 
     }
 
-    public function edit($id){
-        $record = Category::find($id, ['name', 'id', 'image']);
-
-        
-        $this->name = $record->name;
-        $this->selected_id = $record->id;
-        $this->image = null;
-
-        
-    }
-
     public function resetUI(){
         $this->name = '';
         $this->image = null;
