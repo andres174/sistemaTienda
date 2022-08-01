@@ -75,10 +75,29 @@ class CategoriesComponent extends Component
 
     public function actualizar(){
         $this->validate();
-        $c = Category::find( $this->selected_id);
-        $c->update([
+        $category = Category::find( $this->selected_id);
+        $category->update([
             'name' => $this->name
         ]);
+
+        if ($this->image) 
+        {
+            $customFileName = uniqid() . '_.' . $this->image->extension();
+            $this->image->storeAs('public/categorias', $customFileName);
+            $imageName = $category->image;
+            $category->image = $customFileName;
+            $category->save();
+
+            if($imageName!=null)
+            {    
+                if(file_exists('storage/categories' . $imageName));
+                {
+                    Storage::delete('storage/categories' . $imageName);
+                }
+            }
+
+        }
+        $this->resetUI();
 
 
         /* $this->reset(); */
