@@ -98,4 +98,44 @@ class CategoriesComponent extends Component
     public function form(){
         return redirect('categories-form');
     }
+
+    public function Update(){
+      $rules =[
+          'name' => "required|min:3|unique:categories,name,¨{$this->selected_id}"
+    ];
+    $messages=[
+
+'name.required'=> 'nombre de categoria requerido',
+'name.min' => 'El nombre de la categoria al meno debe de tener 3 caracteres',
+'name.unifique'=> 'El nombre de la categoria y existe'
+    ];
+    $this->validate($rules,$messages);
+
+    $category = Category::find($this->selected_id);
+    $category->update([
+    'name' => $this->name
+
+    ]);
+  
+    if ($this->image) 
+    {
+        $customFileName = uniqid() . '_.' . $this->image->extension();
+        $this->image->storeAs('public/categorias', $customFileName);
+        $imageName = $category->image;
+        $category->image = $customFileName;
+        $category->save();
+
+       if($imageName!=null)
+       {
+       if(file_exists('storage/categories' . imageName));
+       {
+        unlink('storage/categories' . imageName);
+       }
+       }
+
+    }
+    $this->resetUI();
+  
+    }
+
 }
