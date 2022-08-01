@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\CategoriesComponent;
+use App\Http\Livewire\CategoriesForm;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('categorias', CategoriesComponent::class);
+
+Route::get('categories-form', CategoriesForm::class);
