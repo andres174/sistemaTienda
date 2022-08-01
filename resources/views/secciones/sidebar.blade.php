@@ -21,9 +21,9 @@
     <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-                <a href="" class="nav-link">
-                    <div {{-- class="base-menu" --}}>
-                        <div {{-- class="base-icons" --}}>
+                <a href="{{url('categorias')}}" class="nav-link">
+                    <div class="base-menu">
+                        <div class="base-icons">
                             <i class="fa-solid fa-tags"></i>
                         </div>
                         <p>CATEGORIAS</p>

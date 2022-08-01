@@ -20,13 +20,15 @@ class CategoriesComponent extends Component
 
     public $name, $image;
     public $selected_id, $pageTitle, $componentName;
-    /* public $search; */
+    
     protected $paginationTheme = 'bootstrap';
+
+    public $formEdit = false;
     
 
-    /* protected $queryString = ['search']; */
+    
 
-   /*  protected $rules = [
+    protected $rules = [
         'name' => 'required|unique:categories|min:3',
     ];
 
@@ -37,7 +39,7 @@ class CategoriesComponent extends Component
 
         'name.min' => 'Minimo 3 caracteres'
     ];
- */
+
     public function mount(){
         $this->pageTitle = 'Listado';
         $this->componentName = 'Categorias';
@@ -51,49 +53,42 @@ class CategoriesComponent extends Component
         ->paginate(5)/* ->get() */;
         return view('livewire.categories-component', compact('c'))
         ->extends('layouts.plantilla.app')
-        ->section('contenido')
-        /* ->section('header_izq')
-        ->section('header_der') */;
-    }
-
-    /* public function guardar(){
-
-        dd("aaaaaaaaaa");
-        $this->validate();
-
-        $category = Category::create([
-            'name' => $this->name
-        ]);
-
-        $customFileName;
-        if ($this->image) {
-            $customFileName = uniqid() . '_.' . $this->image->extension();
-            $this->image->storeAs('public/categorias', $customFileName);
-            $category->image = $customFilename;
-            $category->save();
-            $this->resetUI();
-            $this->emit('category-added', 'categoria registrada');
-        }
-
+        ->section('contenido');
     }
 
     public function edit($id){
-        $record = Category::find($id, ['name', 'id', 'image']);
-
         
+        
+        $record = Category::find($id);
+
+        $this->selected_id = $id;
         $this->name = $record->name;
-        $this->selected_id = $record->id;
         $this->image = null;
 
-        $this->emit('show-modal', 'show modal!');
+        $this->formEdit = true;
+
     }
 
-    public function resesUI(){
+    public function ocultar(){
+        $this->formEdit = false;
+    }
+
+    public function actualizar(){
+        $this->validate();
+        $c = Category::find( $this->selected_id);
+        $c->update([
+            'name' => $this->name
+        ]);
+
+
+        /* $this->reset(); */
+    }
+
+    public function resetUI(){
         $this->name = '';
         $this->image = null;
-        $this->search = '';
-        $this->selected_id = 0;
-    } */
+        
+    }
 
     public function form(){
         return redirect('categories-form');
