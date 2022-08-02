@@ -80,11 +80,11 @@
                         <td>{{$item->name}}</td>
                         <td><img src="{{ asset('storage/categorias/'.$item->image)}}" alt="" height="50px"></td>
                         
-                        <td>
+                        <td class="d-flex justify-content-around">
                             <a href="javascript:void(0)" wire:click="edit({{$item->id}})" class="btn btn-outline-dark mtmobile" title="Editar">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <a href="javascript:void(0)" {{-- esto esta en duda --}} onclick="confirm('{{$item->id}}')" {{-- wire:click="edit({{$item->id}})" --}} class="btn btn-outline-dark" title="Eliminar">
+                            <a href="javascript:void(0)" {{-- esto esta en duda --}} onclick="confirm('{{$item->id}}')" {{-- wire:click="edit({{$item->id}})" --}} class="btn btn-outline-danger" title="Eliminar">
                                 <i class="fas fa-trash"></i>
                             </a>
 

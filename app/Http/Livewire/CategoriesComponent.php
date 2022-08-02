@@ -113,6 +113,7 @@ class CategoriesComponent extends Component
         return redirect('categories-form');
     }
 
+<<<<<<< HEAD
     protected $listeners =[
         'deleteRow' => 'Destroy'
     ];
@@ -130,4 +131,6 @@ class CategoriesComponent extends Component
         $this->emit('category-deleted', 'categoria Eliminada');
     }
 
+=======
+>>>>>>> 741fbe337d05b8e29fe13022c1dbe4447f9126da
 }
