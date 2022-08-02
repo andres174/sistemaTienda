@@ -122,7 +122,28 @@
       </div><!-- /.container-fluid -->
 
 
-
+  
 </div>
+
+<script>
+  function confirm (id)
+  {
+    swal({
+      title: 'Confirmar',
+      text: '¿Confirma eliminar el registro?'
+      type: 'warning'
+      showCancelButton: true,
+      cancelButtonText: 'Cerrar',
+      cancelButtonColor: '#fff',
+      confirmButtonColor: '#3b3f5c',
+      confirmButtonText: 'Aceptar',
+    }).then(function(result){
+      if(result.value){
+        window.livewire.emit('deleteRow',id)
+        swal.close()
+      }
+    })
+  }
+</script>
 
 
