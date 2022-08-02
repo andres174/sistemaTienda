@@ -84,9 +84,14 @@
                             <a href="javascript:void(0)" wire:click="edit({{$item->id}})" class="btn btn-outline-dark mtmobile" title="Editar">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <a href="javascript:void(0)" {{-- esto esta en duda --}} onclick="confirm('{{$item->id}}')" {{-- wire:click="edit({{$item->id}})" --}} class="btn btn-outline-danger" title="Eliminar">
+
+                            {{-- <p class="badge text-bg-warning">{{$item->products->count()}}</p> --}}
+
+                            @if ($item->products->count() < 1)
+                              <a href="javascript:void(0)" wire:click="destroy({{$item->id}})" class="btn btn-outline-danger" title="Eliminar">
                                 <i class="fas fa-trash"></i>
-                            </a>
+                              </a>
+                            @endif
 
                         </td>
                         
@@ -121,29 +126,9 @@
         <!-- /.row -->
       </div><!-- /.container-fluid -->
 
-
   
 </div>
 
-<script>
-  function confirm (id)
-  {
-    swal({
-      title: 'Confirmar',
-      text: '¿Confirma eliminar el registro?'
-      type: 'warning'
-      showCancelButton: true,
-      cancelButtonText: 'Cerrar',
-      cancelButtonColor: '#fff',
-      confirmButtonColor: '#3b3f5c',
-      confirmButtonText: 'Aceptar',
-    }).then(function(result){
-      if(result.value){
-        window.livewire.emit('deleteRow',id)
-        swal.close()
-      }
-    })
-  }
-</script>
+
 
 

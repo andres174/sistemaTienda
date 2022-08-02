@@ -113,11 +113,8 @@ class CategoriesComponent extends Component
         return redirect('categories-form');
     }
 
-<<<<<<< HEAD
-    protected $listeners =[
-        'deleteRow' => 'Destroy'
-    ];
-    public function Destroy($id)
+    
+    public function destroy($id)
     {
         $category = Category::find($id);
         $imageName = $category->image; //imagen temporal
@@ -128,9 +125,7 @@ class CategoriesComponent extends Component
            Storage::delete('storage/categories' . $imageName);
         }
         $this->resetUI();
-        $this->emit('category-deleted', 'categoria Eliminada');
+        
     }
 
-=======
->>>>>>> 741fbe337d05b8e29fe13022c1dbe4447f9126da
 }
