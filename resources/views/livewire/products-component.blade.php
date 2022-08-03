@@ -199,9 +199,14 @@
                   </div>
                   <!-- /.card-body -->
                   <div class="card-footer">
-                    <button type="button" class="btn btn-success m-3" wire:click="fechasProductos" >
-                      FECHAS DE LOS PRODUCTOS
-                    </button>
+                    <div class="row justify-content-center">
+                      <button type="button" class="btn btn-success m-3" wire:click="fechasProductos" >
+                        FECHAS DE LOS PRODUCTOS
+                      </button>
+                      {{-- <button type="button" class="btn btn-success m-3" wire:click="cambiarStock" >
+                        ACTUALIZAR STOCK
+                      </button> --}}
+                    </div>
                   </div>
                 </div>
 

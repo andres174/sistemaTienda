@@ -8,6 +8,7 @@ use App\Http\Livewire\ProductsForm;
 use App\Http\Livewire\PosComponent;
 use App\Http\Livewire\ClientsComponent;
 use App\Http\Livewire\ClientsForm;
+use App\Http\Livewire\Stock;
 
 use App\Http\Livewire\FechasComponent;
 
@@ -49,6 +50,8 @@ Route::get('clients-form', ClientsForm::class);
 Route::get('fechas-productos', FechasComponent::class);
 
 Route::get('productos-expirados', Expirado::class);
+
+Route::get('actualizar-stock', Stock::class);
 
 
 

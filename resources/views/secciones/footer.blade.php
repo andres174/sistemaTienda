@@ -1,4 +1,4 @@
-<footer class="main-footer {{-- position-absolute --}} fixed-bottom top-0">
+<footer class="main-footer position-absolute {{-- fixed-bottom --}} top-0">
     <!-- To the right -->
     <div class="float-right d-none d-sm-block">
       Sistema Tienda

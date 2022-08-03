@@ -182,4 +182,8 @@ class ProductsComponent extends Component
         $this->resetUI();
         
     }
+
+    public function cambiarStock(){
+        return redirect('actualizar-stock');
+    }
 }
