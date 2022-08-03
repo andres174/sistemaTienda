@@ -64,9 +64,10 @@ class CategoriesForm extends Component
             $this->image->storeAs('public/categorias', $customFileName);
             $category->image = $customFileName;
             $category->save();
-            $this->resetUI();
+            
             
         }
+        $this->resetUI();
 
     }
 
