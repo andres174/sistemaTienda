@@ -69,6 +69,7 @@ class ProductsComponent extends Component
         ->select('products.*', 'c.name as category')
         ->where('products.name', 'like', '%'.$this->search.'%')
         ->orWhere('c.name', 'like', '%'.$this->search.'%')
+        ->orWhere('products.barcode', 'like', '%'.$this->search.'%')
         ->paginate(5);
         $c = Category::all();
         return view('livewire.products-component', compact('p', 'c'))

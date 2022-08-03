@@ -40,7 +40,7 @@
                     </div>
                 </a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a href="{{url('pos')}}" class="nav-link">
                     <div class="base-menu">
                         <div class="base-icons">
@@ -49,7 +49,7 @@
                         <p>VENTAS</p>
                     </div>
                 </a>
-            </li>
+            </li> --}}
             {{-- <li class="nav-item">
                 <a href="" class="nav-link">
                     <div class="base-menu">
@@ -110,7 +110,7 @@
                     </div>
                 </a>
             </li> --}}
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a href="" class="nav-link">
                     <div class="base-menu">
                         <div class="base-icons">
@@ -119,7 +119,7 @@
                         <p>REPORTES</p>
                     </div>
                 </a>
-            </li>
+            </li> --}}
         </ul>
     
     </nav>
