@@ -26,13 +26,6 @@
                           
                           
                         </tbody>
-                        <tfoot>
-                        <tr>
-                            <button type="button" class="btn btn-success m-3" wire:click="productosExpirados" >
-                                PRODUCTOS PROXIMOS A CADUCAR
-                            </button>
-                        </tr>
-                        </tfoot>
                         
                       </table>
                 </div>

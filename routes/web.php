@@ -11,6 +11,9 @@ use App\Http\Livewire\ClientsForm;
 
 use App\Http\Livewire\FechasComponent;
 
+use App\Http\Livewire\Expirado;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,4 +47,9 @@ Route::get('clientes', ClientsComponent::class);
 Route::get('clients-form', ClientsForm::class);
 
 Route::get('fechas-productos', FechasComponent::class);
+
+Route::get('productos-expirados', Expirado::class);
+
+
+
 
