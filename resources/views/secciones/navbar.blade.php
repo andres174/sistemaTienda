@@ -20,7 +20,7 @@
       <a class="nav-link" data-widget="navbar-search" href="#" role="button">
         <i class="fas fa-search"></i>
       </a>
-      <div class="navbar-search-block">
+      {{-- <div class="navbar-search-block">
         <form class="form-inline">
           <div class="input-group input-group-sm">
             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
@@ -34,7 +34,7 @@
             </div>
           </div>
         </form>
-      </div>
+      </div> --}}
     </li>
 
     <!-- Messages Dropdown Menu -->
@@ -149,12 +149,12 @@
       </a>
 
       <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
-          <div class="dropdown-item">
+          {{-- <div class="dropdown-item">
               <a href="user_profile.html">
                 <i class="fa-solid fa-id-card px-2"></i>
                 <span> Perfil</span>
               </a>
-          </div>
+          </div> --}}
           <div class="dropdown-item">
               <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
                 <i class="fa-solid fa-arrow-right-from-bracket px-2"></i>

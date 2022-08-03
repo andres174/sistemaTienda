@@ -90,7 +90,7 @@ class ClientsComponent extends Component
         $category = Client::find( $this->selected_id);
         $category->update([
             'name' => $this->name,
-            'address' => $this->addres,
+            'address' => $this->address,
             'phone' => $this->phone,
             'DNI' => $this->DNI,
         ]);

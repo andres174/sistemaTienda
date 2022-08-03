@@ -23,13 +23,7 @@
                                     @error('name') <span class="text-danger er"> {{$message}} </span> @enderror
                                 </div>
 
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                                      <span class="fas fa-edit"></span>
-                                  </span>
-                                  <input type="text" wire:model="name" class="form-control" placeholder="Nombre y apellido.">
-                                  @error('name') <span class="text-danger er"> {{$message}} </span> @enderror
-                              </div>
+      
                               <div class="input-group-prepend mt-3">
                                   <span class="input-group-text">
                                       <span class="fas fa-edit"></span>
