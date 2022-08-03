@@ -146,6 +146,10 @@ class ProductsComponent extends Component
         return redirect('products-form');
     }
 
+    public function fechasProductos(){
+        return redirect('fechas-productos');
+    }
+
     public function resetUI(){
         $this->name = '';
         $this->barcode ='';

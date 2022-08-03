@@ -198,7 +198,14 @@
                     {{ $p->links() }}
                   </div>
                   <!-- /.card-body -->
+                  <div class="card-footer">
+                    <button type="button" class="btn btn-success m-3" wire:click="fechasProductos" >
+                      FECHAS DE LOS PRODUCTOS
+                    </button>
+                  </div>
                 </div>
+
+                
     
     
                 </div><!-- /.card -->

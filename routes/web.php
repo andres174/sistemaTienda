@@ -9,6 +9,8 @@ use App\Http\Livewire\PosComponent;
 use App\Http\Livewire\ClientsComponent;
 use App\Http\Livewire\ClientsForm;
 
+use App\Http\Livewire\FechasComponent;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,3 +42,6 @@ Route::get('pos', PosComponent::class);
 
 Route::get('clientes', ClientsComponent::class);
 Route::get('clients-form', ClientsForm::class);
+
+Route::get('fechas-productos', FechasComponent::class);
+
