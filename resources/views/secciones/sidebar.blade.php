@@ -41,7 +41,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{url('pos')}}" class="nav-link">
                     <div class="base-menu">
                         <div class="base-icons">
                             <i class="fa-solid fa-file-invoice-dollar"></i>

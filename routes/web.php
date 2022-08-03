@@ -5,6 +5,7 @@ use App\Http\Livewire\CategoriesComponent;
 use App\Http\Livewire\CategoriesForm;
 use App\Http\Livewire\ProductsComponent;
 use App\Http\Livewire\ProductsForm;
+use App\Http\Livewire\PosComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,5 @@ Route::get('categories-form', CategoriesForm::class);
 Route::get('productos', ProductsComponent::class);
 
 Route::get('products-form', ProductsForm::class);
+
+Route::get('pos', PosComponent::class);
