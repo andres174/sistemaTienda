@@ -6,6 +6,8 @@ use App\Http\Livewire\CategoriesForm;
 use App\Http\Livewire\ProductsComponent;
 use App\Http\Livewire\ProductsForm;
 use App\Http\Livewire\PosComponent;
+use App\Http\Livewire\ClientsComponent;
+use App\Http\Livewire\ClientsForm;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +37,6 @@ Route::get('productos', ProductsComponent::class);
 Route::get('products-form', ProductsForm::class);
 
 Route::get('pos', PosComponent::class);
+
+Route::get('clientes', ClientsComponent::class);
+Route::get('clients-form', ClientsForm::class);
